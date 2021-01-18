@@ -3,8 +3,6 @@ import requests
 import json
 import pymssql
 
-extra line
-
 client_id = '41830863-3f79-4c6e-afb4-b663b432dca5'
 tenant_id = '35558aca-3637-44e9-8cc7-393f0482cb28'
 client_secret = 'mMwua1ft-20nME1_hkZ~~x-ZBHd6G1XkHv'
