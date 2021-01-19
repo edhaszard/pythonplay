@@ -1,3 +1,4 @@
+import sys
 import msal
 import requests
 import json
@@ -21,3 +22,5 @@ def get_token(client_id, tenant_id, client_secret):
 
 # get a Graph API token to use for API calls
 token = get_token(client_id, tenant_id, client_secret)
+
+print(token)
