@@ -3,9 +3,10 @@ import requests
 import json
 import pymssql
 
-client_id = '41830863-3f79-4c6e-afb4-b663b432dca5'
+# "Ed Test" App Registration in IHC Azure AD:
+client_id = '352cef7b-9b63-4bb8-a2af-05df03eb37c8'
 tenant_id = '35558aca-3637-44e9-8cc7-393f0482cb28'
-client_secret = 'mMwua1ft-20nME1_hkZ~~x-ZBHd6G1XkHv'
+client_secret = '0_D_QnRos~h0wHmo0E1Z6Fwzy_JS.W67O3'
 #sqlserver = "172.22.0.70"
 #sqldatabase = "Payglobal"
 #sqluserid = "AWS_Glue_Login_SQLAuthentication_PG"
