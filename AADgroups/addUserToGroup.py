@@ -20,6 +20,10 @@ def get_token(client_id, tenant_id, client_secret):
         result = app.acquire_token_for_client(scopes=scope)
     return result['access_token']
 
+# function to get a user
+def get_aaduser(token)
+    
+
 # get a Graph API token to use for API calls
 token = get_token(client_id, tenant_id, client_secret)
 
