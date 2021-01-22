@@ -8,24 +8,8 @@ client_id = '352cef7b-9b63-4bb8-a2af-05df03eb37c8'
 tenant_id = '35558aca-3637-44e9-8cc7-393f0482cb28'
 client_secret = '0_D_QnRos~h0wHmo0E1Z6Fwzy_JS.W67O3'
 
-# function to get graph api token
-#def get_tokenOLD(client_id, tenant_id, client_secret):
-#    scope = ["https://graph.microsoft.com/.default"]
-#    app = msal.ConfidentialClientApplication(client_id,
-#                        authority='https://login.microsoftonline.com/{}'.format(tenant_id),
-#                        client_credential=client_secret
-#                        )
-#    result = app.acquire_token_silent(scopes=scope, account=None)
-#    if not result:
-#        result = app.acquire_token_for_client(scopes=scope)
-#    return result['access_token']
-
-# function to get a auth token
+# function to get a graph api auth token
 def get_token(client_id, authority, secret,scope):
-    print(client_id)
-    print(authority)
-    print(secret)
-    print(scope)
     app = msal.ConfidentialClientApplication(
         client_id, authority=authority,
         client_credential=secret,
@@ -39,9 +23,9 @@ def get_token(client_id, authority, secret,scope):
 
     return result['access_token']
 
-def getAADuser(token, endpoint):
+def getAADuser(token, endpoint, UPN, attributes):
     graph_data = requests.get(  # Use token to call downstream service
-        endpoint + '/ed.haszard@ihc.org.nz',
+        endpoint + '/' + UPN + '?$select=' + attributes,
         headers={'Authorization': 'Bearer ' + token},).json()
         
     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
@@ -50,7 +34,7 @@ def getAADuser(token, endpoint):
 # config = json.load(open(sys.argv[1]))
 
 # load parameters from JSON file
-with open("AADgroups\msal-parametersEdTestIHC.json") as json_file:
+with open(r"C:\Users\haszarde\OneDrive - IHC\Documents\github\pythonplay\AADgroups\msal-parametersEdTestIHC.json") as json_file:
     config = json.load(json_file)
 
 client_id = config["client_id"]
@@ -58,11 +42,13 @@ authority = config["authority"]
 secret = config["secret"]
 scope = config["scope"]
 endpoint = config["endpoint"]
+UPN = config["UPN"]
+attributes = config["attributes"]
 
 # get a Graph API token to use for API calls
-token = get_token(client_id, authority, secret, scope)
+token = get_token(client_id, authority, secret, scope,)
 
 # get user(s)
-getAADuser(token, endpoint)
+getAADuser(token, endpoint, UPN, attributes)
 
 #print(token)
