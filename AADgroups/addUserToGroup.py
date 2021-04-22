@@ -2,6 +2,7 @@ import sys
 import msal
 import requests
 import json
+import os
 
 # "Ed Test" App Registration in IHC Azure AD:
 client_id = '352cef7b-9b63-4bb8-a2af-05df03eb37c8'
@@ -34,7 +35,7 @@ def getAADuser(token, endpoint, UPN, attributes):
 # config = json.load(open(sys.argv[1]))
 
 # load parameters from JSON file
-with open(r"C:\Users\haszarde\OneDrive - IHC\Documents\github\pythonplay\AADgroups\msal-parametersEdTestIHC.json") as json_file:
+with open(os.path.join(sys.path[0], "msal-parametersEdTestIHC.json")) as json_file:
     config = json.load(json_file)
 
 client_id = config["client_id"]
