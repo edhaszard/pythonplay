@@ -24,6 +24,7 @@ def get_token(client_id, authority, secret,scope):
 
     return result['access_token']
 
+# function to get details about an AAD user
 def getAADuser(token, endpoint, UPN, attributes):
     graph_data = requests.get(  # Use token to call downstream service
         endpoint + '/' + UPN + '?$select=' + attributes,

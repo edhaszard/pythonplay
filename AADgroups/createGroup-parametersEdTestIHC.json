@@ -3,7 +3,7 @@
     "client_id": "352cef7b-9b63-4bb8-a2af-05df03eb37c8",
     "scope": ["https://graph.microsoft.com/.default"],   
     "secret": "0_D_QnRos~h0wHmo0E1Z6Fwzy_JS.W67O3",
-    "endpoint": "https://graph.microsoft.com/v1.0/users",
-    "UPN": "warren.bell@ihc.org.nz",
-    "attributes": "displayName,givenName,userPrincipalName, Department, manager, city, employeeID,employeeid"
+    "endpoint": "https://graph.microsoft.com/v1.0/groups",
+    "area": "Wellington",
+    "membershipRule": "(user.jobTitle -eq \"Service Manager\" -or user.jobTitle -eq \"Support Worker\")"
   }
