@@ -32,8 +32,6 @@ def createAADgroup(token, endpoint, UPN, attributes):
         
     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
 
-
-
 # load parameters from JSON file
 with open(os.path.join(sys.path[0], "createGroup-parametersEdTestIHC.json")) as json_file:
     config = json.load(json_file)
