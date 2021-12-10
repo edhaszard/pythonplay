@@ -27,7 +27,21 @@ def get_token(client_id, authority, secret,scope):
 # function to create an AAD group
 def createAADgroup(token, endpoint, UPN, attributes):
     graph_data = requests.post(  # Use token to call downstream service
-        endpoint
+        endpoint,
         headers={'Authorization': 'Bearer ' + token},).json()
         
     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
+
+
+
+# load parameters from JSON file
+with open(os.path.join(sys.path[0], "createGroup-parametersEdTestIHC.json")) as json_file:
+    config = json.load(json_file)
+
+authority = config["authority"]
+client_id = config["client_id"]
+scope = config["scope"]
+secret = config["secret"]
+endpoint = config["endpoint"]
+area = config["area"]
+membershipRule = config["membershipRule"]
