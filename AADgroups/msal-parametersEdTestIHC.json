@@ -4,6 +4,6 @@
     "scope": ["https://graph.microsoft.com/.default"],   
     "secret": "0_D_QnRos~h0wHmo0E1Z6Fwzy_JS.W67O3",
     "endpoint": "https://graph.microsoft.com/v1.0/users",
-    "UPN": "warren.bell@ihc.org.nz",
-    "attributes": "displayName,givenName,userPrincipalName, Department, manager, city, employeeId"
+    "UPN": "nathaniel.king@ihc.org.nz",
+    "attributes": "displayName,givenName,userPrincipalName, Department, manager, city, employeeId, mail"
   }

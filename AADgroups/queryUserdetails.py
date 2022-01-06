@@ -4,11 +4,6 @@ import requests
 import json
 import os
 
-# "Ed Test" App Registration in IHC Azure AD:
-#client_id = '352cef7b-9b63-4bb8-a2af-05df03eb37c8'
-#tenant_id = '35558aca-3637-44e9-8cc7-393f0482cb28'
-#client_secret = '0_D_QnRos~h0wHmo0E1Z6Fwzy_JS.W67O3'
-
 # function to get a graph api auth token
 def get_token(client_id, authority, secret,scope):
     app = msal.ConfidentialClientApplication(
@@ -36,7 +31,7 @@ def getAADuser(token, endpoint, UPN, attributes):
 # config = json.load(open(sys.argv[1]))
 
 # load parameters from JSON file
-with open(os.path.join(sys.path[0], "msal-parametersEdTestIHC.json")) as json_file:
+with open(os.path.join(sys.path[0], "msal-parametersEdTestHaszbro.json")) as json_file:
     config = json.load(json_file)
 
 client_id = config["client_id"]

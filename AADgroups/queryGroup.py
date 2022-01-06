@@ -28,7 +28,7 @@ def getAADgroup(token, endpoint, UPN):
     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
 
 # load parameters from JSON file
-with open(os.path.join(sys.path[0], "queryGroup-parameters.json")) as json_file:
+with open(os.path.join(sys.path[0], "queryGroup-parameters Haszbro.json")) as json_file:
     config = json.load(json_file)
 
     authority = config["authority"]
