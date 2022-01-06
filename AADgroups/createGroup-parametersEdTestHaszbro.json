@@ -1,0 +1,8 @@
+{
+  "authority": "https://login.microsoftonline.com/6ce45401-b68f-4108-820d-bd39a53c81a8",
+  "client_id": "a8e34635-fd13-4b0e-87bc-908865f764e0",
+  "scope": ["https://graph.microsoft.com/.default"],   
+  "secret": "_Cu7Q~gNUv20GyOzdUEYoecpxwAyUC1NKm4Wo",
+  "area": "Wellington",
+  "membershipRule": "(user.jobTitle -eq \"Service Manager\" -or user.jobTitle -eq \"Support Worker\")"
+  }

@@ -1,0 +1,12 @@
+{
+    "description": "This is a test group",
+    "displayName": "Test Group",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.upn -eq \"DiegoS@haszbro.onmicrosoft.com)",
+    "membershipRuleProcessingState": "on"
+}
