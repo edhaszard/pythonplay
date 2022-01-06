@@ -7,6 +7,6 @@
     "mailEnabled": false,
     "mailNickname": "testGraphAPIgroup",
     "securityEnabled": true,
-    "membershipRule": "(user.upn -eq \"DiegoS@haszbro.onmicrosoft.com)",
+    "membershipRule": "(user.objectID -eq \"24af62d6-e0f8-4dba-8593-2459b21383a6\")",
     "membershipRuleProcessingState": "on"
 }
