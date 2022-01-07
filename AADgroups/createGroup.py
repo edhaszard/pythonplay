@@ -4,8 +4,6 @@ import requests
 import json
 import os
 
-# bumhole
-
 # function to get a graph api auth token
 def get_token(client_id, authority, secret,scope):
     app = msal.ConfidentialClientApplication(
