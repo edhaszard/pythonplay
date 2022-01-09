@@ -1,0 +1,8 @@
+{
+  "authority": "https://login.microsoftonline.com/35558aca-3637-44e9-8cc7-393f0482cb28",
+  "client_id": "352cef7b-9b63-4bb8-a2af-05df03eb37c8",
+  "scope": ["https://graph.microsoft.com/.default"],   
+  "secret": "0_D_QnRos~h0wHmo0E1Z6Fwzy_JS.W67O3",
+  "endpoint": "https://graph.microsoft.com/v1.0/groups",
+  "groupID": "rubbish"
+}
