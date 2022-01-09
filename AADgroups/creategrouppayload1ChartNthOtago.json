@@ -1,0 +1,12 @@
+{
+    "description": "1Chart application access for SW, Admin Mgr, and SM staff in Otago/Clutha",
+    "displayName": "APP 1Chart North Otago",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.department -eq \"North Otago\" -and (user.extensionAttribute3 -eq \"SPWRKR\" -or user.extensionattribute4 -eq \"ADMGR\" -or user.extensionattribute4 -eq \"SM\" -or user.jobTitle -eq \"Support Worker - Contractor\"))",
+    "membershipRuleProcessingState": "on"
+}

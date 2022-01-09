@@ -29,7 +29,7 @@ def createAADgroup(token, endpoint, payload):
     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
 
 # load parameters from JSON file
-with open(os.path.join(sys.path[0], "createGroup-parametersEdTestHaszbro.json")) as json_file:
+with open(os.path.join(sys.path[0], "createGroup-parametersEdTestIHC.json")) as json_file:
     config = json.load(json_file)
 
 authority = config["authority"]
@@ -39,7 +39,7 @@ secret = config["secret"]
 endpoint = config["endpoint"]
 
 # get the JSON payload
-with open(os.path.join(sys.path[0], "creategrouppayloadHaszbro.json")) as json_file:
+with open(os.path.join(sys.path[0], "creategrouppayload1ChartNthOtago.json")) as json_file:
     payload = json.load(json_file)
     #payloadstr = str(payload)
 
