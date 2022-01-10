@@ -20,7 +20,7 @@ def get_token(client_id, authority, secret,scope):
     return result['access_token']
 
 # function to get details about an AAD group
-def getAADgroup(token, endpoint, UPN):
+def getAADgroup(token, endpoint, objID):
     graph_data = requests.get(  # Use token to call downstream service
         endpoint + '/' + objID, # + '?$select=' + attributes,
         headers={'Authorization': 'Bearer ' + token},).json()
