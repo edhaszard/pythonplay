@@ -1,0 +1,12 @@
+{
+    "description": "Salesforce access for Activity Planning for Area Mgr, Service Mgr, and Admin Manager Manager staff in <department/area>",
+    "displayName": "APP Salesforce Activity Planning <department/area>",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.department -eq \"<department/area>\" -and (user.extensionAttribute3 -eq \"SVMGR\") -or (user.extensionAttribute3 -eq \"ADMGR\")) -or ((user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\") -and user.streetaddress -contains \"<city>\")",
+    "membershipRuleProcessingState": "on"
+}
