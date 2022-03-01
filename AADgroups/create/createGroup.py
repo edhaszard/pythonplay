@@ -31,18 +31,17 @@ def createAADgroup(token, endpoint, payload):
 #     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
 
 # load parameters from JSON file
-with open(os.path.join(sys.path[0], "createGroup-parametersEdTestHaszbro.json")) as json_file:
+with open(os.path.join(sys.path[0], "createGroup-parametersEdTestIHC.json")) as json_file:
     config = json.load(json_file)
-
-authority = config["authority"]
-client_id = config["client_id"]
-scope = config["scope"]
-secret = config["secret"]
-endpoint = config["endpoint"]
+    authority = config["authority"]
+    client_id = config["client_id"]
+    scope = config["scope"]
+    secret = config["secret"]
+    endpoint = config["endpoint"]
 
 # copy the generic payload file to work with the current Area
-area = "chombiblior"
-city = "chadston"
+area = "Taranaki"
+city = "Taranaki"
 originalfile = (os.path.join(sys.path[0], "creategrouppayloadSalesForcegeneric.json"))
 newfile = (os.path.join(sys.path[0], "areapayloads/creategrouppayloadSalesForce" + area + ".json"))
 shutil.copyfile(originalfile,newfile)
@@ -69,4 +68,4 @@ token = get_token(client_id, authority, secret, scope,)
 # create a group
 createAADgroup(token, endpoint, payload)
 
-#print(payload)
+#print(token)
