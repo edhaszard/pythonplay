@@ -40,10 +40,11 @@ with open(os.path.join(sys.path[0], "createGroup-parametersEdTestIHC.json")) as 
     endpoint = config["endpoint"]
 
 # copy the generic payload file to work with the current Area
-area = "Taranaki"
+area = "Ashburton/South Canterbury"
+hyphenatedarea = area.replace('/', '-')
 city = "Taranaki"
 originalfile = (os.path.join(sys.path[0], "creategrouppayloadSalesForcegeneric.json"))
-newfile = (os.path.join(sys.path[0], "areapayloads/creategrouppayloadSalesForce" + area + ".json"))
+newfile = (os.path.join(sys.path[0], "areapayloads/creategrouppayloadSalesForce" + hyphenatedarea + ".json"))
 shutil.copyfile(originalfile,newfile)
 
 # modify the  JSON payload with the current Area details
