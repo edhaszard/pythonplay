@@ -28,7 +28,7 @@ def getAADgroup(token, endpoint, objID):
     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
 
 # load parameters from JSON file
-with open(os.path.join(sys.path[0], "queryGroup-parameters Haszbro.json")) as json_file:
+with open(os.path.join(sys.path[0], "queryGroup-parameters.json")) as json_file:
     config = json.load(json_file)
 
     authority = config["authority"]
@@ -39,9 +39,11 @@ with open(os.path.join(sys.path[0], "queryGroup-parameters Haszbro.json")) as js
     objID = config["objID"]
 
 # get a Graph API token to use for API calls
+print("I'm in the token call")
 token = get_token(client_id, authority, secret, scope,)
 
 # get AAD group info
+print("I'm in the get-group call")
 getAADgroup(token, endpoint, objID)
 
-#print(token)
+print(token)
