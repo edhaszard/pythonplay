@@ -1,0 +1,12 @@
+{
+    "description": "Salesforce access for Activity Planning for Area Mgr, Service Mgr, and Admin Manager Manager staff in Specialist Adult Services",
+    "displayName": "APP Salesforce Activity Planning Specialist Adult Services",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.department -eq \"Specialist Adult Services\" -and (user.extensionattribute3 -eq \"SVMGR\" -or user.extensionattribute4 -eq \"ADMGR\")) -or ((user.streetaddress -contains \"Porirua\") -and (user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\"))",
+    "membershipRuleProcessingState": "on"
+}

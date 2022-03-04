@@ -1,0 +1,12 @@
+{
+    "description": "Salesforce access for Activity Planning for Area Mgr, Service Mgr, and Admin Manager Manager staff in Manawatu/Rangitikei",
+    "displayName": "APP Salesforce Activity Planning Manawatu/Rangitikei",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.department -eq \"Manawatu/Rangitikei\" -and (user.extensionattribute3 -eq \"SVMGR\" -or user.extensionattribute4 -eq \"ADMGR\")) -or ((user.streetaddress -contains \"Palmerston North\") -and (user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\"))",
+    "membershipRuleProcessingState": "on"
+}

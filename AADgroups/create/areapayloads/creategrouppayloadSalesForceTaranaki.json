@@ -7,6 +7,6 @@
     "mailEnabled": false,
     "mailNickname": "testGraphAPIgroup",
     "securityEnabled": true,
-    "membershipRule": "(user.department -eq \"Taranaki\" -and (user.extensionAttribute3 -eq \"SVMGR\") -or (user.extensionAttribute4 -eq \"ADMGR\")) -or ((user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\") -and user.streetaddress -contains \"Taranaki\")",
+    "membershipRule": "(user.department -eq \"Taranaki\" -and (user.extensionattribute3 -eq \"SVMGR\" -or user.extensionattribute4 -eq \"ADMGR\")) -or ((user.streetaddress -contains \"Hawera\" -or user.streetaddress -contains \"New Plymouth\") -and (user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\"))",
     "membershipRuleProcessingState": "on"
 }

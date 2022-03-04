@@ -1,0 +1,12 @@
+{
+    "description": "Salesforce access for Activity Planning for Area Mgr, Service Mgr, and Admin Manager Manager staff in Rotorua/EBOP",
+    "displayName": "APP Salesforce Activity Planning Rotorua/EBOP",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.department -eq \"Rotorua/EBOP\" -and (user.extensionattribute3 -eq \"SVMGR\" -or user.extensionattribute4 -eq \"ADMGR\")) -or ((user.streetaddress -contains \"Taupo\" -or user.streetaddress -contains \"Rotorua\" -or user.streetaddress -contains \"Whakatane\") -and (user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\"))",
+    "membershipRuleProcessingState": "on"
+}

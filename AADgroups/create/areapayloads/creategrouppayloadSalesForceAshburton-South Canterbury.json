@@ -1,0 +1,12 @@
+{
+    "description": "Salesforce access for Activity Planning for Area Mgr, Service Mgr, and Admin Manager Manager staff in Ashburton/South Canterbury",
+    "displayName": "APP Salesforce Activity Planning Ashburton/South Canterbury",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.department -eq \"Ashburton/South Canterbury\" -and (user.extensionattribute3 -eq \"SVMGR\" -or user.extensionattribute4 -eq \"ADMGR\")) -or ((user.streetaddress -contains \"Ashburton\" -or user.streetaddress -contains \"Timaru\") -and (user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\"))",
+    "membershipRuleProcessingState": "on"
+}

@@ -28,7 +28,7 @@ def createAADgroup(token, endpoint, payload):
         json=payload,
         headers={'Authorization': 'Bearer ' + token, 'Content-type': 'application/json'},).json(),
             
-#     print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
+    print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
 
 # load parameters from JSON file
 with open(os.path.join(sys.path[0], "createGroup-parametersEdTestIHC.json")) as json_file:
@@ -40,9 +40,9 @@ with open(os.path.join(sys.path[0], "createGroup-parametersEdTestIHC.json")) as 
     endpoint = config["endpoint"]
 
 # copy the generic payload file to work with the current Area
-area = "Ashburton/South Canterbury"
+area = "West/Central Auckland"
 hyphenatedarea = area.replace('/', '-')
-city = "Taranaki"
+city = '"Waitakere"'# -or user.streetaddress -contains "Paeroa"'
 originalfile = (os.path.join(sys.path[0], "creategrouppayloadSalesForcegeneric.json"))
 newfile = (os.path.join(sys.path[0], "areapayloads/creategrouppayloadSalesForce" + hyphenatedarea + ".json"))
 shutil.copyfile(originalfile,newfile)

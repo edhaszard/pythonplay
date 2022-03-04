@@ -1,0 +1,12 @@
+{
+    "description": "Salesforce access for Activity Planning for Area Mgr, Service Mgr, and Admin Manager Manager staff in Tauranga/Thames Valley",
+    "displayName": "APP Salesforce Activity Planning Tauranga/Thames Valley",
+    "groupTypes": [
+        "DynamicMembership"
+    ],
+    "mailEnabled": false,
+    "mailNickname": "testGraphAPIgroup",
+    "securityEnabled": true,
+    "membershipRule": "(user.department -eq \"Tauranga/Thames Valley\" -and (user.extensionattribute3 -eq \"SVMGR\" -or user.extensionattribute4 -eq \"ADMGR\")) -or ((user.streetaddress -contains \"Tauranga\" -or user.streetaddress -contains \"Paeroa\") -and (user.extensionattribute4 -eq \"ARMGR\" -or user.extensionattribute4 -eq \"SMREC\"))",
+    "membershipRuleProcessingState": "on"
+}
